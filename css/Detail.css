@@ -1,0 +1,369 @@
+@charset "utf-8";
+html,
+body,
+ul,li,
+img,
+dl,h1,
+dt,h2,
+dd,input,
+div,
+p{margin:0;padding:0;}
+div{display: block;}
+ul,li{list-style: none;}
+a{text-decoration: none;}
+.wrap{
+	background:#E2E2E2;
+	padding-top:20px;
+}
+.content-box{
+	width:960px;
+	height:1000px;
+	margin:0 auto;
+}
+.detail-pro{
+	display: block;
+	color:#6c6c6c;
+}
+.now-pos{
+	height:40px;
+	border-bottom: 1px solid #f6f6f3;
+	background-color: #fff;
+}
+.now-show{
+	float:left;
+	margin-left: 20px;
+}
+.now-show p{
+	float:left;
+	padding:0 6px;
+	height:22px;
+	margin-top:10px;
+	font:12px/22px "";
+	
+}
+.now-show p a{
+	color:#6C6C6C;
+}
+.now-show i{
+	font-style: normal;
+    color: #6c6c6c;
+    font-weight: bold;
+    margin: 14px 15px 0;
+}
+.pos-close span{
+	color:red;
+}
+.detail-ifo{
+	width: 880px;
+	height:1000px;
+	margin:0 auto;
+	padding:40px;
+	background:#fff;
+}
+/*左边图片*/
+.detail-ifo .detail-img{
+	float:left;
+	width:350px;
+	height:350px;
+}
+/*youb*/
+.detail-info{
+	float:right;
+	width:490px;
+}
+.jianqian{
+	margin-top: -5px;
+}
+h1{
+	-font-size: 26px;
+	height:52px;
+	font-weight: bold;
+	overflow: hidden;
+	-text-align: center;
+}
+/*化妆棉价格*/
+.jiage-zkj{
+	float:left;
+}
+.jiage-zkj i{
+	font-style: normal;
+	font: 20px "微软雅黑";
+	color:#FE6500;
+	padding-left:10px;
+}
+.jiage-zkj em{
+	font-style: normal;
+	font: 36px arial;
+	color:#FE6500;
+}
+.jiage-scj{
+	color:#c4c4c4;
+	font: 14px/40px arial;
+	-margin-top: 19px;
+	font-style: normal;
+}
+.jiage-scj span{
+	padding-left: 10px;
+	font: ;
+}
+.jiage-scj del{
+	font:14px "微软雅黑";
+}
+
+
+
+/**/
+.detail-pjia{
+	border-top:1px solid #C4C4C4;
+	border-bottom:1px solid #C4C4C4;
+	height:45px;
+	margin-top: 10px;
+}
+.detail-score{
+	margin-top:13px;
+}
+.score-txt{
+	float:left;	
+}
+.score-rebg{
+	float:left;
+	width:87px;
+	height:14px;
+	background:	url(../img/xingji.png) no-repeat 0 0;
+}
+.score-rebg span{
+	background:	url(../img/xingji.png) no-repeat 0 -20px;
+	height:14px;
+	display: block;
+}
+.score-mount{
+    color: #6c6c6c;
+   
+    text-decoration: underline;
+    height: 18px;
+    line-height: 18px;
+    font: 14px arial;
+}
+.score-mount a{
+	 margin-left: 16px;
+}
+
+
+/*第二层*/
+.detail-sliang{
+	margin-top:30px;
+}/*文字*/
+.sliang-shul{
+	overflow: hidden;
+}
+.sliang-shul .price{
+	font:12px/24px "微软雅黑";
+	color:#6C6C6C;
+	float: left;
+	
+}
+/*中间数量按钮*/
+.amout{
+	float:left;
+	width:77px;
+	height:24px;
+	overflow: hidden;
+	border: 1px solid #C4C4C4;
+}
+.amout span{
+	width:24px;
+	height:24px;
+	float:left;
+	cursor: pointer;
+}
+.amout .down{
+	background:	url(../img/updown.png) no-repeat 0 -24px;
+}
+.amout .number{
+    font-weight: normal;
+    width: 29px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    float: left;
+    font-family: Arial;
+    font-size: 14px;
+    border: 0;
+}
+.amout .up{
+	background:	url(../img/updown.png) no-repeat 0 0;
+}
+/*更多*/
+.more{
+	float:left;
+	margin-left: 25px;
+	font:14px/26px "微软雅黑";
+	
+}
+.more a{
+	color:#00C8FF;
+}
+/**/
+.tipbox{
+	overflow: hidden;
+	height:82px;/*点击sanjiao去掉overflow*/
+}
+.tipbg-one{
+	overflow: hidden;
+	padding:10px 0;
+	border-bottom: 1px dashed #C4C4C4;
+}
+.sanjiao{
+	background: url(../img/xingji.png) no-repeat right -175px;
+}
+.tipbg-onemz {/*公共的满赠*/
+    width: 40px;
+    background: #ff643c;
+    color: #fff;
+    text-align: center;
+    margin-right: 7px;
+}
+.tipbg-one .tipbg-onemz {
+    float: left;
+    height: 20px;
+    line-height: 20px;
+}
+.tiaojian{
+	float: left;
+    height: 20px;
+    line-height: 20px;
+    font:14px "微软雅黑";
+}
+
+/*立即加入*/
+.detail-jiaru{
+	margin-top:20px;
+	margin-bottom: 25px;
+}
+
+.jianru-gouw{
+	width: 200px;
+    height: 45px;
+    float: left;
+    margin-right: 35px;
+}
+.jianru-gouw a {
+    display: block;
+    width: 137px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    font-family: '微软雅黑';
+    font-size: 24px;
+    padding-left: 63px;
+    background: #ff643c url(../img/xingji.png) no-repeat 0 -78px;
+}
+.jianru-showc{
+	float: left;
+    color: #c4c4c4;
+    cursor: pointer;
+    padding-left: 23px;
+    margin-top: 17px;
+    background: url(../img/xingji.png) no-repeat 0 -40px;
+}
+.gongx{
+	overflow: hidden;
+	width:100%;
+	-padding-
+}
+.gongx-xiao a{
+	display: block;
+	width: 40px;
+    height: 20px;
+    line-height: 20px;
+    background: #00c8ff;
+    margin-top:10px;
+    color: #fff;
+    text-align: center;
+    margin-right: 9px;
+}
+/**/
+.jqzoom{
+	float:left;
+	border:none;
+	position:relative;
+	padding:0px;cursor:pointer;
+	margin:0px;
+	display:block;
+}
+.zoomdiv{
+	z-index:100;
+	position:absolute;
+	top:0px;left:0px;
+	width:350px;
+	height:350px;
+	background:#fff;
+	border:1px solid #CCC;
+	display:none;
+	text-align:center;
+	overflow:hidden;
+}
+.jqZoomPup{
+	z-index:10;visibility:hidden;
+	position:absolute;top:0px;left:0px;
+	width:20px;height:20px;border:1px solid #aaa;
+	background:#fff;
+	opacity: 0.5;
+	-filter: alpha(Opacity=50);
+}
+
+/*图片小图预览列表*/
+.spec-preview{
+	width:350px;
+	height:350px;
+	border:1px solid #DFDFDF;
+}
+.spec-scroll{
+	clear:both;
+	margin-top:5px;
+	width:352px;
+}
+.spec-scroll .prev{
+	float:left;
+	margin-right:4px;
+}
+.spec-scroll .next{float:right;}
+.spec-scroll .prev,.spec-scroll .next{
+	display:block;
+	font-family:"宋体";
+	text-align:center;
+	width:10px;height:54px; 
+	line-height:54px;
+	border:1px solid #CCC;
+	background:#EBEBEB;
+	cursor:pointer;
+	text-decoration:none;
+}
+.spec-scroll .items{
+	float:left;
+	position:relative;
+	width:322px;
+	height:56px;
+	overflow:hidden;
+}
+.spec-scroll .items ul{
+	position:absolute;
+	width:999999px;
+	height:56px;
+}
+.spec-scroll .items ul li{
+	float:left;
+	width:64px;
+	text-align:center;
+}
+.spec-scroll .items ul li img{
+	border:1px solid #CCC;
+	padding:2px;
+	width:50px;
+	height:50px;
+}
+.spec-scroll .items ul li img:hover{
+	border:2px solid #FF6600;
+	padding:1px;
+}
+

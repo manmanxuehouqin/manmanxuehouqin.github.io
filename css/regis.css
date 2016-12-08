@@ -1,0 +1,268 @@
+@charset "utf-8";
+html,
+body,
+ul,
+img,
+dl,
+dt,
+dd,
+div,
+p,input{
+	margin:0;
+	padding:0;
+}
+div,
+img{
+	display: block;
+}
+ul,
+li{
+	list-style: none;
+}
+body{
+	
+}
+a{
+	color:#6c6c6c;
+	text-decoration: none;
+}
+.wrap{
+	background: #f6f6f3;
+	color:#6c6c6c;
+}
+
+/*全屏图片*/
+.container{
+	width:100%;
+	margin:0 auto;
+	position: relative;
+}
+.container-box{
+	position: relative;
+	height:785px;
+	width:100%;
+}
+.contbox-banner{
+	width:100%;
+	height:785px;
+	display: block;
+	position: absolute;
+	left:0;
+	top:0;
+}
+.contbox-banner .contbox-bg{
+	position: absolute;
+	top:0;
+	left:0;
+	display: block;
+	width:100%;
+	height:785px;
+	background:url(../img/zhuce.jpg) no-repeat; 
+}
+
+
+/*底部*/
+.userlog-title{
+	-margin-bottom: 35px;
+}
+.userlog-title p{
+	overflow: hidden;
+	font-family: "微软雅黑";
+}
+.userlog-title span{
+	font-size: 24px;
+	color:#000;
+	float:left;
+}
+.userlog-title a{
+	display: block;
+	font-size: 16px;
+	color:#00c8ff;
+	float:right;
+	margin-top:7px;
+}
+.userlog-info{
+	margin-bottom: 15px;
+}
+.userlog-other{
+	padding-top:10px;
+	font:12px arial;
+	border-top:1px #e3e3e3 dotted;
+}
+.userlog-other p{
+	padding-top:10px;
+}
+.userlog-other ul{
+	margin-top:15px;
+	display: block;
+}
+.userlog-other ul li{
+	float:left;
+	text-align: center;
+	padding-left: 34px;
+	display: block;
+	height:30px;
+}
+
+.userlog-other .qq{
+	width:30px;
+	background:url(../img/other_autoico.png) no-repeat 0 0;
+}
+.userlog-other .alipay{
+	width:35px;
+	background:url(../img/other_autoico.png) no-repeat 0 -30px;
+}
+.userlog-other .sina{
+	width:30px;
+	background:url(../img/other_autoico.png) no-repeat 0 -60px;
+}
+.userlog-other .t360{
+	width:30px;
+	background:url(../img/other_autoico.png) no-repeat 0 -90px;
+}
+.userlog-other .baidu{
+	width:30px;
+	background:url(../img/other_autoico.png) no-repeat 0 -120px;
+}
+.userlog-other .renren{
+	width:30px;
+	background:url(../img/other_autoico.png) no-repeat 0 -150px;
+}
+.userlog-other .xunlei{
+	width:30px;
+	background:url(../img/other_autoico.png) no-repeat 0 -180px;
+}
+
+.u-txt{
+	position: relative;
+	margin: 5px 0;
+}
+.u-txt .sign-txt{
+	width: 314px;
+    height: 16px;
+    border: 1px #c4c4c4 solid;
+    font-size: 14px;
+    padding: 7px 0;
+    color: #6c6c6c;
+    padding-left: 10px;
+}
+/*提示信息样式*/
+.error{
+	height:7px;
+	padding-bottom: 5px;
+}
+.message{
+	font-size: 12px;
+	margin-bottom:3px;
+	color:#ff643c;
+}
+
+
+.sign-box{
+	width:326px;
+	height:459px;
+	background:#fff;
+	position: absolute;
+	top: 125px;
+	left:50%;
+	margin-left:70px;
+	box-shadow: 0 0 26px #fcdfdf;
+	padding:30px 40px 40px;
+}
+
+/*验证码*/
+.txtyzk{
+	width:150px;
+	height:30px;
+	color:#C4C4C4;
+	border:1px solid #c4c4c4;
+}
+.ehong-idcode-val{
+	position:relative;
+	padding:1px 4px 1px 4px;
+	top:0px;
+	*top:-3px;
+	letter-spacing:4px;
+	display:inline;
+	cursor:pointer;
+	font-size:14px;
+	font-family:"Courier New", Courier, monospace;
+	text-decoration:none;
+	font-weight:bold;
+}
+/*验证码显示位置*/
+#idcode{
+	width:70px;
+	height:20px;
+}
+/*提交按钮*/
+#butn{
+	border:0;
+	width:40px;
+	height:22px;
+	background:#00C8FF;
+}
+.ehong-code-val-tip{
+	font-size:12px;
+	color:#1098EC;
+	top:0px;
+	*top:-3px;	
+	position:relative;	
+	margin:0px 0px 0px 4px;
+	cursor:pointer;	
+}
+.ehong-idcode-val0{
+	border:solid 1px #A4CDED;	
+	background-color:#ECFAFf;
+}
+
+.ehong-idcode-val1{
+	border:solid 1px #A4CDED;	
+	background-color:#FCEFCF;
+}
+.ehong-idcode-val2{
+	border:solid 1px #6C9;	
+	background-color:#D0F0DF;
+}
+.ehong-idcode-val3{
+	border:solid 1px #6C9;	
+	background-color:#DCDDD8;
+}
+.ehong-idcode-val4{
+	border:solid 1px #6C9;	
+	background-color:#F1DEFF;
+}
+.ehong-idcode-val5{
+	border:solid 1px #6C9;	
+	background-color:#ACE1F1;
+}
+
+.u-operate{
+	overflow: hidden;
+}
+.u-operate label{
+	float:left;
+	height:14px;
+	cursor: pointer;
+	display: block;
+}
+.auto-login{
+	float:left;
+	font:12px "微软雅黑";
+}
+
+.f-password{
+	float:right;
+	font:12px "微软雅黑";
+}
+.btn-d input{
+	width: 326px;
+    height: 36px;
+    background: #00c8ff;
+    color: #fff;
+    font-family: '微软雅黑';
+    font-size: 14px;
+    border: 0;
+    letter-spacing: 6px;
+    cursor: pointer;
+}

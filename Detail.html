@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/Detail.css"header">
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="content-box">
+				<div class="detail-pro">
+					<div class="now-pos">
+						<div class="now-show">
+							<p class="pos-link"><a href="#">商品首页</a><i>></i></p>
+							<p class="pos-link"><a href="#">化妆棉</a><i>></i></p>
+							<p class="pos-link"><a href="#">知我药妆</a><i>></i></p>
+							<p class="pos-close"><span>知我药妆化妆棉100片</span></p>
+						</div>
+					</div>
+					<div class="detail-ifo clearfix">
+						<div class="detail-img">
+							<div id="preview" class="spec-preview"> 
+								<span class="jqzoom">
+									<img jqimg="img/ahzm.jpg" src="img/ahzm.jpg" />
+									<span class="filter"></span>
+								</span> 
+							</div>
+							
+					    	
+					    	<div class="spec-scroll"> <a class="prev">&lt;</a> <a class="next">&gt;</a>
+						      	<div class="items">
+						        	<ul>
+						          		<li><img alt="知我药妆化妆棉" bimg="img/ahzm.jpg" src="img/ahzm.jpg" onmousemove="preview(this);"></li>
+						          		<li><img alt="知我药妆化妆棉" bimg="img/ahzm.jpg" src="img/ahzm.jpg" onmousemove="preview(this);"></li>
+						          		<li><img alt="知我药妆化妆棉" bimg="img/14286006733849720386.jpg" src="img/14286006733849720386.jpg" onmousemove="preview(this);"></li>
+						          		<li><img alt="知我药妆化妆棉" bimg="img/ahzm.jpg" src="img/ahzm.jpg" onmousemove="preview(this);"></li>
+						          		<li><img alt="知我药妆化妆棉" bimg="img/ahzm.jpg" src="img/ahzm.jpg" onmousemove="preview(this);"></li>
+						          		<li><img alt="知我药妆化妆棉" bimg="img/ahzm.jpg" src="img/ahzm.jpg" onmousemove="preview(this);"></li>
+						          		<li><img alt="知我药妆化妆棉" bimg="img/ahzm.jpg" src="img/ahzm.jpg" onmousemove="preview(this);"></li>
+						          		
+						        	</ul>
+						      	</div>
+					    	</div>
+						</div>
+						<div class="detail-info">
+							<div class="detail-jiage">
+								<h1>知我药妆化妆棉100片(粉色)</h1>
+								<div class="jiaqian">
+									<p class="jiage-zkj">
+										<i>￥</i>
+										<em>19.9</em>
+									</p>
+									<p class="jiage-scj">
+										<span>市场价:</span>
+										<del>25.0</del>
+									</p>
+								</div>
+							</div>
+							<div class="detail-pjia">
+								<div class="detail-score">
+									<p class="score-txt">评&nbsp;价：</p>
+									<p class="score-rebg">
+										<span class="regoods"></span>
+									</p>
+									<p class="score-mount">
+										<a href="#">
+											<span>1670</span>个人评价
+										</a>
+									</p>
+								</div>
+							</div>
+							<div class="detail-sliang">
+								<div class="sliang-shul">
+									<input type="hidden" name="" id="" value="" />
+									<span class="price">数&nbsp;量：</span>
+									<p class="amout">
+										<span class="down"></span>
+										<input type="text" class="number" name="" id="" value="1" />
+										<span class="up"></span>
+									</p>
+									<p class="more">
+										<a href="#">更多</a>
+									</p>
+								</div>
+								<div class="sliang-manzen">
+									<div class="tipbox">
+										<p class="tipbg-one sanjiao">
+											<span class="tipbg-onemz">满赠</span>
+											<span class="tiaojian">双十二下单就送</span>
+											<span class="tub"></span>
+										</p>
+										<p class="tipbg-one">
+											<span class="tipbg-onemz">满赠</span>
+											<span class="tiaojian">双十二下单就送</span>
+											<span class="tub"></span>
+										</p>
+										<p class="tipbg-one">
+											<span class="tipbg-onemz">满赠</span>
+											<span class="tiaojian">双十二下单就送</span>
+											<span class="tub"></span>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="detail-jiaru">
+								<div class="jianru">
+									<p class="jianru-gouw">
+										<a href="#">加入购物车</a>
+									</p>
+									<p class="jianru-showc">收藏</p>
+								</div>
+								<div class="gongx">
+									<span class="gongx-xiao">
+										<a href="#">功效</a>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/Drtail.js" ></script>
+		<script type="text/javascript" src="js/a.js" ></script>
+		<script>
+			//Tab控制函数
+			function tabs(tabId, tabNum){
+				//设置点击后的切换样式
+				$(tabId + " .tab li").removeClass("curr");
+				$(tabId + " .tab li").eq(tabNum).addClass("curr");
+				//根据参数决定显示内容
+				$(tabId + " .tabcon").hide();
+				$(tabId + " .tabcon").eq(tabNum).show();
+			}
+			//=====================全局函数========================
+			
+			//==================图片详细页函数=====================
+			//鼠标经过预览图片函数
+			function preview(img){
+				$("#preview .jqzoom img").attr("src",$(img).attr("src"));
+				$("#preview .jqzoom img").attr("jqimg",$(img).attr("bimg"));
+			}
+			
+				//图片放大镜效果
+				$(function(){
+					$(".jqzoom").jqueryzoom({xzoom:380,yzoom:410});
+				});
+			
+				//图片预览小图移动效果,页面加载时触发
+				$(function(){
+				var tempLength = 0; //临时变量,当前移动的长度
+				var viewNum = 5; //设置每次显示图片的个数量
+				var moveNum = 2; //每次移动的数量
+				var moveTime = 300; //移动速度,毫秒
+				var scrollDiv = $(".spec-scroll .items ul"); //进行移动动画的容器
+				var scrollItems = $(".spec-scroll .items ul li"); //移动容器里的集合
+				var moveLength = scrollItems.eq(0).width() * moveNum; //计算每次移动的长度
+				var countLength = (scrollItems.length - viewNum) * scrollItems.eq(0).width(); //计算总长度,总个数*单个长度
+				  
+				//下一张
+				$(".spec-scroll .next").bind("click",function(){
+					if(tempLength < countLength){
+						if((countLength - tempLength) > moveLength){
+							scrollDiv.animate({left:"-=" + moveLength + "px"}, moveTime);
+							tempLength += moveLength;
+						}else{
+							scrollDiv.animate({left:"-=" + (countLength - tempLength) + "px"}, moveTime);
+							tempLength += (countLength - tempLength);
+						}
+					}
+				});
+				//上一张
+				$(".spec-scroll .prev").bind("click",function(){
+					if(tempLength > 0){
+						if(tempLength > moveLength){
+							scrollDiv.animate({left: "+=" + moveLength + "px"}, moveTime);
+							tempLength -= moveLength;
+						}else{
+							scrollDiv.animate({left: "+=" + tempLength + "px"}, moveTime);
+							tempLength = 0;
+						}
+					}
+				});
+			});
+    
+   
+		</script>
+	</body>
+</html>

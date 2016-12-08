@@ -1,0 +1,432 @@
+@charset "utf-8";
+html,
+body,
+ul,
+img,
+dl,
+dt,
+dd,
+div,
+p{
+	margin:0;
+	padding:0;
+}
+div{
+	display: block;
+}
+ul,
+li{
+	list-style: none;
+}
+body{
+	
+}
+a{
+	color:#6c6c6c;
+	text-decoration: none;
+}
+.wrap{
+	background: #f6f6f3;
+	color:#6c6c6c;
+}
+/* 头部*/
+.header{
+	width:100%;
+}/*头部nav*/
+.header-topnav{
+	font:12px arial;
+	background: #f2f2f2;
+	border-bottom: 1px solid #e5e5e5;
+	height:29px;
+}
+.topnav-cont{
+	width:960px;
+	height:29px;
+	line-height: 30px;
+	margin:0 auto;
+}/*左侧nav*/
+.header-left{
+	float:left;
+}
+.header-left li{
+	float:left;
+	margin-right: 30px;
+	font:12px/30px arial;
+}
+/*右侧nav*/
+.header-right{
+	float:right;
+	cursor: pointer;
+}
+.header-right li{
+	position: relative;
+	color:#6c6c6c;
+	float: left;
+	padding:0 12px;
+}
+/**/
+.header-right li .item-subnav{
+    width: 100%;
+    position: absolute;
+    background: #fff;
+	color:#6c6c6c;
+    z-index: 400;
+    top: 29px;
+    left: -1px;
+    padding: 3px 0 10px;
+    border: 1px #e5e5e5 solid;
+    border-top: 0;
+    overflow: hidden;
+    display: none;
+}
+/*微信图标*/
+.weixintu img{
+	width:100%;
+	display: block;
+}
+/*我的小窝*/
+.item-subnav ul li{
+	width:100%;
+	clear:left;
+}
+.header-right li a{
+	display: block;
+}
+.header-right li span{
+	float:left;
+}
+.header-right li i{
+	background:url(../img/top.png) no-repeat 0 -70px;
+	float:left;
+	width:6px;
+	height:29px;
+	margin-left:7px;
+}
+.item-phone a{
+	background:url(../img/top.png) no-repeat 0 0;
+	padding-left: 14px;
+	overflow: hidden;
+}
+/*banner*/
+.userlog-log{
+	background:#fff;
+	height:108px;
+}
+.header-cont{
+	width:960px;
+	margin:0 auto;
+}
+.header-contlog{
+	float:left;
+}
+.header-continfo{
+	float:right;
+}
+/*全屏图片*/
+.container{
+	width:100%;
+	height:785px;
+	margin:0 auto;
+	position: relative;
+}
+.container-box{
+	position: relative;
+	height:785px;
+	width:100%;
+}
+.contbox-banner{
+	width:100%;
+	height:785px;
+	display: block;
+	position: absolute;
+	left:0;
+	top:0;
+}
+.contbox-banner .contbox-bg{
+	position: absolute;
+	top:0;
+	left:0;
+	display: block;
+	width:100%;
+	height:785px;
+	background:url(../img/denglu.jpg) no-repeat; 
+}
+/*登录*/
+.sign-box{
+	width:325px;
+	height:380px;
+	background:#fff;
+	position: absolute;
+	top: 125px;
+	left:50%;
+	margin-left:70px;
+	box-shadow: 0 0 26px #fcdfdf;
+	padding:30px 40px 40px;
+}
+.userlog-title{
+	margin-bottom: 15px;
+}
+.userlog-title p{
+	overflow: hidden;
+	font-family: "微软雅黑";
+}/*登录*/
+.userlog-title span{
+	font-size: 24px;
+	color:#000;
+	float:left;
+}
+/*免费注册*/
+.userlog-title a{
+	display: block;
+	font-size: 16px;
+	color:#00c8ff;
+	float:right;
+	margin-top:7px;
+}
+
+/*所有的div底边15px距离*/
+.entry{
+	margin-bottom: 15px;
+}
+.u-name{
+	margin-bottom: 6px;
+}
+.u-name label{
+	font:14px arial;
+}
+
+.error{
+	height:5px;
+}
+.message{
+	font-size: 12px;
+	margin-bottom:3px;
+	color:#ff643c;
+}
+p{
+	overflow: hidden;
+}
+.u-txt{
+	position: relative;
+}
+
+.u-code input{
+	width:320px;
+	height:25px;
+	float:left;
+}
+.u-code img{
+	float:left;
+	width:75px;
+	height:20px;
+	margin:7px 0 0 21px;
+}
+.u-code .huan{
+	float:left;
+	color:#00C8FF;
+	margin:9px 0 0 11px;
+	cursor: pointer;
+}
+/*自动登录和忘记密码*/
+.u-operate{
+	overflow: hidden;
+}
+.u-operate label{
+	float:left;
+	height:14px;
+	cursor: pointer;
+	display: block;
+}
+.auto-login{
+	float:left;
+	font:12px "微软雅黑";
+	padding-bottom:5px;
+}
+.f-password{
+	float:right;
+	font:12px "微软雅黑";
+	padding-bottom:5px;
+}
+/*最后的登录按钮*/
+.btn-d input{
+	width: 326px;
+    height: 35px;
+    background: #00c8ff;
+    color: #fff;
+    font-family: '微软雅黑';
+    font-size: 20px;
+    border: 0;
+    letter-spacing: 6px;
+    cursor: pointer;
+}
+
+/*底部*/
+.userlog-title{
+	-margin-bottom: 35px;
+}
+.userlog-title p{
+	overflow: hidden;
+	font-family: "微软雅黑";
+}
+.userlog-title span{
+	font-size: 24px;
+	color:#000;
+	float:left;
+}
+.userlog-title a{
+	display: block;
+	font-size: 16px;
+	color:#00c8ff;
+	float:right;
+	margin-top:7px;
+}
+.userlog-info{
+	margin-bottom: 15px;
+}
+.userlog-other{
+	padding-top:10px;
+	font:12px arial;
+	border-top:1px #e3e3e3 dotted;
+}
+.userlog-other p{
+	padding-top:10px;
+}
+.userlog-other ul{
+	margin-top:15px;
+	display: block;
+}
+.userlog-other ul li{
+	float:left;
+	text-align: center;
+	padding-left: 34px;
+	display: block;
+	height:30px;
+}
+
+.userlog-other .qq{
+	width:30px;
+	background:url(../img/other_autoico.png) no-repeat 0 0;
+}
+.userlog-other .alipay{
+	width:35px;
+	background:url(../img/other_autoico.png) no-repeat 0 -30px;
+}
+.userlog-other .sina{
+	width:30px;
+	background:url(../img/other_autoico.png) no-repeat 0 -60px;
+}
+.userlog-other .t360{
+	width:30px;
+	background:url(../img/other_autoico.png) no-repeat 0 -90px;
+}
+.userlog-other .baidu{
+	width:30px;
+	background:url(../img/other_autoico.png) no-repeat 0 -120px;
+}
+.userlog-other .renren{
+	width:30px;
+	background:url(../img/other_autoico.png) no-repeat 0 -150px;
+}
+.userlog-other .xunlei{
+	width:30px;
+	background:url(../img/other_autoico.png) no-repeat 0 -180px;
+}
+
+/*底部*/
+.footer{
+	width:100%;
+	background:#fff;
+	clear:both;
+	cursor: pointer;
+}
+/*底部上*/
+.f-top{
+	width:1100px;
+	margin:0 auto;
+	padding-top:34px;
+	padding-left: 16px;
+	
+}
+dl{
+	width:119px;
+	margin-left: 20px;
+	float:left;
+	font:14px "微软雅黑";
+}
+dt{
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+dd{
+	font-size: 14px;
+}
+.footer-mrl{
+	width:103px;
+	
+	float:right;
+	margin-left: 8px;
+}
+.footer-mrl dt{
+	margin-left: 6px;
+	
+}
+.footer-mrl dd img{
+	width:103px;
+	height:103px;
+}
+/*底部中*/
+.f-center{
+	width:100%;
+	float:left;
+	background:#00C8FF;
+}
+.f-center-box{
+	width:100%;
+	margin: 0 auto;
+}
+.f-center-box ul{
+	text-align: center;
+	padding-left:60px;
+}
+.f-center-box li{
+	font:14px/35px "微软雅黑";
+	font-weight: bold;
+	width:134px;
+	height:35px;
+	color:#fff;
+	padding-left: 30px;
+	text-align: left;
+	display: inline-block;
+}
+.fcb-invest{
+	background:url(../img/assure.png) no-repeat 0 0;
+}
+.fcb-quality{
+	background: url(../img/assure.png) no-repeat 0 -35px;
+}
+.fcb-return{
+	background:url(../img/assure.png) no-repeat 0 -70px;
+}
+.fcb-mail{
+	background:url(../img/assure.png) no-repeat 0 -105px;
+}
+.fcb-mail li{width:160px;}
+/*底部下*/
+.f-floor{
+	margin:0 auto ;
+	padding:26px 0 45px;
+}
+.f-floor p{
+	cursor: pointer;
+	color:#000000;
+	width:100%;
+	font:12px arial;
+	margin-bottom: 20px;
+	text-align: center;
+	overflow: hidden;
+}
+.f-1{
+	margin-bottom: 7px;
+	padding-top:26px;
+}

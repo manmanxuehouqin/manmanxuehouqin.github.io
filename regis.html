@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册</title>
+		<link rel="stylesheet" href='css/regis.css' />
+	</head>
+	<body>
+		<div class="wrap">
+			
+			<div class="container">
+				<div class="container-box">
+					<div class="contbox-banner">
+						<a class="contbox-bg" href="#"></a>
+					</div>
+				</div>
+				<div class="sign-box">
+					<div class="userlog-title">
+						<p>
+							<span>注册</span>
+							<a href="#">登录</a>
+						</p>
+					</div>
+					<div class="userlog-info">
+						<form method="post" action="/account/login">
+							<input type="hidden" name="redirect" value="">
+							<!--手机号-->
+							<div class="info-account">
+								<p class="u-txt">
+									<input class="sign-txt username focus-sel" type="text" value="" placeholder="请输入您的手机号或邮箱" name="username">
+								</p>
+								<!--提示信息所在地-->
+								<p class="error">
+									<div class="f-input-tip error">
+										<div class="message"></div>
+									</div>									
+								</p>
+							</div>
+							<!--密码-->
+							<div class="u-password one">
+								<p class="u-txt">
+									<input class="sign-txt password" type="password" id="login-password" value="" placeholder="请输入密码" name="password">
+								</p>
+									<p class="error">
+									<div class="f-input-tip error">
+										<div class="message"></div>
+									</div>									
+								</p>
+							</div>
+							<!--再次输入密码-->
+							<div class="u-password two">
+								<p class="u-txt">
+									<input class="sign-txt password-check" type="password" id="login-password" value="" placeholder="确认密码" name="password">
+								</p>
+									<p class="error">
+									<div class="f-input-tip error">
+										<div class="message"></div>
+									</div>									
+								</p>
+							</div>
+							<!--验证码-->
+							<div class="u-code verifycode">
+								<p class="u-txt">
+									<input type="text" id ="Txtidcode" class ="txtyzk" value="请输入验证码"><span id="idcode"></span>
+									<input type="button" id="butn" value="提交"></center>
+								</p>
+								<p class="error">
+									<div class="f-input-tip error">
+										<div class="message"></div>
+									</div>
+								</p>
+							</div>
+							
+							<div class="btn-d">
+								<p>
+									<input type="button" class="zhu" value="同意协议并注册">
+								</p>
+							</div>
+						</form>
+					</div>
+					<div class="userlog-other">
+						<p>合作网站帐号登录</p>
+						<ul class="ext_connect clearfix">
+							<li class="qq"><a href="">QQ</a></li>
+							<li class="alipay"><a href="">支付宝</a></li>
+							<li class="sina"><a href="">新浪微博</a></li>
+							<li class="t360"><a href="">360</a></li>
+							<li class="baidu"><a href="">百度</a></li>
+							<li class="renren"><a href="">人人</a></li>
+							<li class="xunlei"><a href="">迅雷</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		<script src="js/jquery.1.11.3.min.js"></script>
+		<script src="js/regis.js"></script>
+	</body>
+</html>
+
+
+
+

@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+	<title>验证码</title>
+		<style>
+			#ehong-code-input{
+				width:42px;
+				letter-spacing:2px;
+				margin:0px 8px 0px 0px;
+			}
+			.ehong-idcode-val{
+				position:relative;
+				padding:1px 4px 1px 4px;
+				top:0px;
+				*top:-3px;
+				letter-spacing:4px;
+				display:inline;
+				cursor:pointer;
+				font-size:16px;
+				font-family:"Courier New", Courier, monospace;
+				text-decoration:none;
+				font-weight:bold;
+			}
+			.ehong-idcode-val0{
+				border:solid 1px #A4CDED;	
+				background-color:#ECFAFB;
+			}
+			
+			.ehong-idcode-val1{
+				border:solid 1px #A4CDED;	
+				background-color:#FCEFCF;
+			}
+			.ehong-idcode-val2{
+				border:solid 1px #6C9;	
+				background-color:#D0F0DF;
+			}
+			.ehong-idcode-val3{
+				border:solid 1px #6C9;	
+				background-color:#DCDDD8;
+			}
+			.ehong-idcode-val4{
+				border:solid 1px #6C9;	
+				background-color:#F1DEFF;
+			}
+			.ehong-idcode-val5{
+				border:solid 1px #6C9;	
+				background-color:#ACE1F1;
+			}
+			.ehong-code-val-tip{
+				font-size:12px;
+				color:#1098EC;
+				top:0px;
+				*top:-3px;	
+				position:relative;	
+				margin:0px 0px 0px 4px;
+				cursor:pointer;	
+			}
+		</style>
+</head>
+<body>
+	<center><br><br>
+	<input type="text" id ="Txtidcode" class ="txtVerification"><span id="idcode">换一张</span>
+	<input type="button" id="butn" value="提交">
+	<input type="button" value="换一张"/>
+	</center>
+	<script src="js/jquery.1.11.3.min.js"></script>
+
+	<script>
+		(function($){
+			var settings = {
+					e	 	: 'idcode',
+					codeType: { name : 'follow', len: 4},
+					codeTip	: 'refresh?',
+					inputID	: 'Txtidcode'//引用验证码输入框Id
+				};
+			
+			var set = {
+				storeLable  : 'codeval',
+				store	: '#ehong-code-input',
+				codeval	: '#ehong-code'
+			}
+			$.idcode = {
+				getCode:function(option){
+					commSetting(option);
+					return storeData(set.storeLable, null);
+				},
+				setCode:function(option){
+					commSetting(option);
+					setCodeStyle("#"+settings.e, settings.codeType.name, settings.codeType.len);
+					
+				},
+				validateCode:function(option){
+					commSetting(option);
+					var inputV;
+					if(settings.inputID){
+						inputV=$('#' + settings.inputID).val();
+					}else{
+						inputV=$(set.store).val();
+					}
+					
+					if(inputV == storeData(set.storeLable, null)){
+						return true;
+					}else{
+						setCodeStyle("#"+settings.e, settings.codeType.name, settings.codeType.len);				
+						return false;
+					}
+				}
+			};
+			
+			function commSetting(option){
+				$.extend(settings, option);		
+			}
+			
+			function storeData(dataLabel, data){
+				var store = $(set.codeval).get(0);			
+				if(data){
+					$.data(store, dataLabel, data);			
+				}else{
+					return $.data(store, dataLabel);			
+				}
+			}
+			
+			function setCodeStyle(eid, codeType, codeLength){
+				var codeObj = createCode(settings.codeType.name, settings.codeType.len);		
+				var randNum = Math.floor(Math.random()*6);
+				var htmlCode=''
+				if(!settings.inputID){
+					htmlCode='<span><input id="ehong-code-input" type="text" maxlength="4" /></span>';
+				}
+				htmlCode+='<div id="ehong-code" class="ehong-idcode-val ehong-idcode-val';
+				htmlCode+=String(randNum);
+				htmlCode+='" href="#" onblur="return false" onfocus="return false" oncontextmenu="return false" onclick="$.idcode.setCode()">' + setStyle(codeObj) + '</div>' + '<span id="ehong-code-tip-ck" class="ehong-code-val-tip" onclick="$.idcode.setCode()">'/*+ settings.codeTip*/ +'</span>';
+				$(eid).html(htmlCode);
+				storeData(set.storeLable, codeObj);		
+			}
+			
+			function setStyle(codeObj){
+				var fnCodeObj = new Array();
+				var col = new Array('#BF0C43', '#E69A2A','#707F02','#18975F','#BC3087','#73C841','#780320','#90719B','#1F72D8','#D6A03C','#6B486E','#243F5F','#16BDB5');
+				var charIndex;
+			   	for(var i=0;i<codeObj.length;i++){		
+					charIndex = Math.floor(Math.random()*col.length);
+					fnCodeObj.push('<font color="' + col[charIndex] + '">' + codeObj.charAt(i) + '</font>');
+				}
+				return fnCodeObj.join('');		
+			}
+			function createCode(codeType, codeLength){
+			   var codeObj;
+			   if(codeType=='follow'){
+				   codeObj = createCodeFollow(codeLength);
+			   }else if(codeType=='calc'){
+				   codeObj = createCodeCalc(codeLength);
+			   }else{
+				   codeObj="";
+			   }
+			   return codeObj;   
+			 }
+			 
+			 function createCodeCalc(codeLength){
+			   var code1, code2, codeResult;
+			   var selectChar = new Array('0','1','2','3','4','5','6','7','8','9');	
+			   var charIndex;
+			   for(var i=0;i<codeLength;i++){		
+				   charIndex = Math.floor(Math.random()*selectChar.length);
+				   code1 +=selectChar[charIndex];
+				   
+				   charIndex = Math.floor(Math.random()*selectChar.length);
+				   code2 +=selectChar[charIndex];		   
+			   }
+			   return [parseInt(code1), parseInt(code2) , parseInt(code1) + parseInt(code2)] ;
+			 }
+			 
+			 function createCodeFollow(codeLength){
+			   var code = "";
+			   var selectChar = new Array('0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z');
+				
+			   for(var i=0;i<codeLength;i++){		
+				   var charIndex = Math.floor(Math.random()*selectChar.length);
+				   if(charIndex % 2 == 0){
+					   code+=selectChar[charIndex].toLowerCase();
+				   }else{
+					   code +=selectChar[charIndex];
+				   }	   
+			   }
+			   return code;
+			 }
+		   
+		})(jQuery);
+	
+	
+	
+	
+	    $.idcode.setCode();   //加载生成验证码方法
+	    $("#butn").click(function(){
+	        var IsBy = $.idcode.validateCode()  //调用返回值，返回值结果为true或者false
+	        if(IsBy){
+	            alert("验证码输入正确")
+	        }else {
+	            alert("请重新输入")
+	        }
+	    })
+	</script>
+
+</body>
+</html>
